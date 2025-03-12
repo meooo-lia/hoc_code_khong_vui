@@ -15,6 +15,7 @@ public class thuc_hanh {
     static Scanner scnr = new Scanner(System.in);
 
     public static void main(String[] args) {
+        tinhThuong();
         System.out.println("Nhap so phan tu mang");
         int count = enterInput("Vui long nhap lai ");
         int[] array = new int[count];
@@ -23,8 +24,9 @@ public class thuc_hanh {
             array[i] = enterInput("nhap so nguyen duong");
         }
         tinhTong(array);
+
     }
-    
+
     public static void tinhTong(int[] array) {
         int tong = 0;
         for (int i = 0; i < array.length; i++) {
@@ -41,5 +43,20 @@ public class thuc_hanh {
             c = Integer.parseInt(scnr.nextLine());
         }
         return c;
+    }
+
+    public static void tinhThuong() {
+
+        int a = 5;
+        int b = 0;
+        if (b == 0) {
+            System.out.println("Ban dang lay 1 so chia cho 0");
+
+        } else {
+            int c = a / b;
+            System.out.println(c);
+         }
+
+        
     }
 }
