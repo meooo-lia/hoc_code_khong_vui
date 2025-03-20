@@ -38,3 +38,4 @@ public class bai_2 {
         }
     }
 }   
+//ngu
