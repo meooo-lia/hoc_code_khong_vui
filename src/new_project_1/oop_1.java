@@ -4,6 +4,7 @@
  */
 package new_project_1;
 
+import Inew_project_1.Ioop_1;
 import Model.Employee;
 import Model.FullTimeEmployee;
 import Model.PartTimeEmployee;
@@ -15,14 +16,14 @@ import java.util.Scanner;
  *
  * @author bibau
  */
-public class oop_1 {
+public class oop_1 implements Ioop_1 {
 
     static ArrayList<FullTimeEmployee> fullTimeList = new ArrayList<>();
     static ArrayList<PartTimeEmployee> partTimeList = new ArrayList<>();
 
     static Scanner scnr = new Scanner(System.in);
 
-    public static void main(String[] args) {
+    public void main(String[] args) {
 
         while (true) {
             menu();
@@ -51,7 +52,7 @@ public class oop_1 {
         }
     }
 
-    public static void menu() {
+    public void menu() {
         System.out.println("1. Them nhan vien ");
         System.out.println("2. Hien thi nhan vien ");
         System.out.println("3. Xoa nhan vien  ");
@@ -61,7 +62,7 @@ public class oop_1 {
 
     }
 
-    public static void add() {
+    public void add() {
         System.out.println("Vui long chon");
         System.out.println("1. fulltime");
         System.out.println("2. parttime");
@@ -78,7 +79,7 @@ public class oop_1 {
 
     }
 
-    public static void fullTime() {
+    public void fullTime() {
 
         System.out.println("Nhap ten nhan vien");
         scnr.nextLine();
@@ -94,7 +95,7 @@ public class oop_1 {
         fullTimeList.add(fullTime);
     }
 
-    public static void partTime() {
+    public void partTime() {
 
         System.out.println("Nhap ten nhan vien");
         scnr.nextLine();
@@ -109,7 +110,7 @@ public class oop_1 {
         partTimeList.add(partTime);
     }
 
-    public static void show() {
+    public void show() {
         System.out.println("1.Danh sach fulltime");
         for (FullTimeEmployee f : fullTimeList) {
             System.out.print("id:" + f.getId());
@@ -131,7 +132,7 @@ public class oop_1 {
         }
     }
 
-    public static void delete() {
+    public void delete() {
         show();
         System.out.println("Vui long chon kieu nhan vien ban muon xoa");
         int index;
@@ -161,7 +162,7 @@ public class oop_1 {
 
     }
 
-    public static void sum() {
+    public void sum() {
         System.out.println("Danh sach nhan vien fullTime");
         for (FullTimeEmployee fullTimeEmployee : fullTimeList) {
             double sumfull;
@@ -184,7 +185,7 @@ public class oop_1 {
         }
     }
 
-    public static void update() {
+    public void update() {
 
         show();
         System.out.println("vui long chon kieu nv");

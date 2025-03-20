@@ -9,5 +9,21 @@ package Inew_project_1;
  * @author bibau
  */
 public interface Ioop_1 {
-    
+
+    public void menu();
+
+    public void add();
+
+    public void fullTime();
+
+    public void partTime();
+
+    public void show();
+
+    public void delete();
+
+    public void sum();
+
+    public void update();
+
 }
